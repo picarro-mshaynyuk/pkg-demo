@@ -25,7 +25,7 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
           cache: "pnpm"
-          scope: "@maksimshaynyuk"
+          scope: "@picarro-mshaynyuk"
 
       - name: Install dependencies
         shell: bash
@@ -37,6 +37,4 @@ jobs:
         with:
           publish: pnpm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
